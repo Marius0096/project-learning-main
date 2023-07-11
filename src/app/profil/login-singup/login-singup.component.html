@@ -1,0 +1,33 @@
+<div class="form-div">
+    <form class="form"  #formRef>
+        <div id="top">
+            <div id="placeholder-container">
+                <img 
+                class="placeholder"
+                src="https://st3.depositphotos.com/6672868/13701/v/450/depositphotos_137014128-stock-illustration-user-profile-icon.jpg" 
+                alt="placeholder-image"
+                loading="lazy">
+                <hr >
+            </div>
+            <hr class="hr50">
+            <h1>Welcome {{textOption1}}!</h1>
+        </div>
+        <hr><br>
+        <div *ngIf="newAccount">
+            <label for="username-input" class="form-label">Username</label><br>
+            <input type="text" name="username" id="username-input" class="form-input" required><br>
+        </div>
+        <!--  -->
+        <label for="email-input" class="form-label">Email</label><br>
+        <input type="email" name="email" id="email-input" class="form-input" required><br>
+        <!--  -->
+        <label for="password-input" class="form-label">Password</label><br>
+        <input type="password" name="password" id="password-input" class="form-input" required><br>
+        <!--  -->
+        <input type="submit"name="sing-up" value="{{submitButtonOption}}" id="log-in-input" class="form-button" (click)="onSubmitForm"><br><br>
+    </form>
+        <hr><br>
+        <!--  -->
+        <label for="sing-up-input" class="form-label" id="account-label">{{textOption2}} have an account?</label><br><br>
+        <button id="sing-uo-button" class="form-button" (click)="toggleLoginSingup()">{{toggleButtonOption}} instead</button>
+</div>
